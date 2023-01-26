@@ -1,0 +1,23 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div>
+            <h2>Category Name:</h2>
+            <span>@Model.Name</span>
+        </div>
+        <div>
+            <h2>Products:</h2>
+            <ul>
+                @foreach (var product in Model.Products)
+                {
+                    <li>@product.Name</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+

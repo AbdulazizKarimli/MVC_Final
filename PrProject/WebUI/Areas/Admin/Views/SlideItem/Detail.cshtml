@@ -1,0 +1,15 @@
+﻿@model SlideItem
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="col-6">
+    <h1>Detail</h1>
+    <h2>@Model.Title</h2>
+    <p>@Model.Offer</p>
+    <p>@Model.Description</p>
+    <img src="~/assets/images/website-images/@Model.Photo" height="50px" />
+</div>
+<div class="col-12 mt-3">
+    <a class="btn btn-info" asp-action="Index">Go back</a>
+</div>

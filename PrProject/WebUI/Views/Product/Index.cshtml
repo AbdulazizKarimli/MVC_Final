@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container">
+    <input hidden value="@ViewBag.ProductCount" id="countInput" />
+    <div class="row" id="productList">
+        @await Component.InvokeAsync("Product")
+    </div>
+    <div style="display: flex; justify-content:center; align-items:center; margin-top:70px">
+        <button class="btn btn-secondary" id="loadMore">Load more</button>
+    </div>
+</div>
+
